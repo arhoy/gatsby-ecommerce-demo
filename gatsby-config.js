@@ -2,11 +2,20 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+// Define site URL here
+let URL;
+if (process.env.NODE_ENV === 'production') {
+  URL = 'https://gatbsy-ecommerce-demo.netlify.com';
+} else {
+  URL = 'http://localhost:8000';
+}
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Ecommerce Demo`,
+    description: `Your next ecommerce Gatsby site powered with Contentful and Snipcart.`,
+    author: `aquasar.io`,
+    siteUrl: URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
