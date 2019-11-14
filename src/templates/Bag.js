@@ -72,7 +72,7 @@ const HyperLink = ({ children }) => (
   <StyledHyperLink>{children}</StyledHyperLink>
 );
 
-const BagTemplate = ({ data: { item } }) => {
+const BagTemplate = ({ data: { item, site } }) => {
   console.log(item.id);
   // modifying the options
   const options = {
