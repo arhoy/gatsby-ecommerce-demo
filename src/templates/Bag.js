@@ -95,11 +95,11 @@ const BagTemplate = ({ data: { item } }) => {
       <StyledImage fluid={item.mainImage.fluid} />
       <button
         className={`snipcart-add-item`}
-        data-item-id={id}
-        data-item-name={productName}
-        data-item-image={mainImage.fluid.src}
-        data-item-price={discountPrice ? discountPrice : price}
-        data-item-url={`${site.siteMetadata.siteUrl}/products/${productSlug}`}
+        data-item-id={item.id}
+        data-item-name={item.productName}
+        data-item-image={item.mainImage.fluid.src}
+        data-item-price={item.discountPrice ? item.discountPrice : item.price}
+        data-item-url={`${site.siteMetadata.siteUrl}/products/${item.productSlug}`}
       >
         Add to Cart
       </button>
